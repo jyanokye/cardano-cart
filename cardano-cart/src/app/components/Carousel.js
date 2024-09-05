@@ -35,9 +35,7 @@ function Carousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000); // Change slide every 3 seconds
-
-    // Cleanup the interval on component unmount
+    }, 10000); 
     return () => {
       clearInterval(interval);
     };
@@ -45,7 +43,7 @@ function Carousel() {
 
 
   return (
-    <div className='w-[55dvw]  h-[880px] w-full  m-auto py-16 px-4 relative group'>
+    <div className='w-[55vw]  h-[880px] w-full  m-auto py-16 px-4 relative group'>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
